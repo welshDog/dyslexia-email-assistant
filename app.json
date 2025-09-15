@@ -1,0 +1,64 @@
+{
+  "name": "Dyslexia-Friendly Email AI Assistant",
+  "description": "🧠 AI-powered email writing assistant designed for dyslexic and neurodivergent users with accessibility features",
+  "repository": "https://github.com/yourusername/dyslexia-email-assistant",
+  "website": "https://your-email-assistant.herokuapp.com",
+  "keywords": [
+    "ai", 
+    "email", 
+    "dyslexia", 
+    "accessibility", 
+    "assistant", 
+    "neurodivergent",
+    "adhd",
+    "writing-aid",
+    "flask",
+    "python"
+  ],
+  "logo": "https://raw.githubusercontent.com/yourusername/dyslexia-email-assistant/main/app/static/images/logo.png",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "Secret key for Flask sessions and security",
+      "generator": "secret"
+    },
+    "PERPLEXITY_API_KEY": {
+      "description": "Your Perplexity API key for AI functionality - Get one at https://perplexity.ai/",
+      "required": true
+    },
+    "DEBUG": {
+      "description": "Enable debug mode for development",
+      "value": "False"
+    },
+    "FLASK_ENV": {
+      "description": "Flask environment setting",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "stack": "heroku-22",
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini",
+      "as": "DATABASE"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "python scripts/setup_database.py"
+  },
+  "environments": {
+    "test": {},
+    "staging": {},
+    "production": {}
+  }
+}
