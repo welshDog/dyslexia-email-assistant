@@ -1,5 +1,9 @@
 # 📧 Dyslexia-Friendly Email AI Assistant
 
+[💎⚡ SUPPORT THE HYPERFOCUS EMPIRE ⚡💎 – Donation & Sponsorship Portal](https://welshdog.github.io/hyperfocuszone.com-Support-Hub-/)
+
+> Join our Focus Warriors, Elite Agents, and Empire Builders to power next-gen ADHD-friendly tools!
+
 > **Transform email writing with AI designed for neurodivergent minds!** ✨
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yourusername/dyslexia-email-assistant)
